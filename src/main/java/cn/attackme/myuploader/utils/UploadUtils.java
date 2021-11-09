@@ -1,5 +1,6 @@
 package cn.attackme.myuploader.utils;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +13,7 @@ public class UploadUtils {
     /**
      * 内部类记录分块上传文件信息
      */
-    private static class Value {
+    public static class Value {
         String name;
         boolean[] status;
 
@@ -20,9 +21,13 @@ public class UploadUtils {
             this.name = generateFileName();
             this.status = new boolean[n];
         }
+
+        public String toString() {
+            return "Value [name=" + this.name + ", status=" + Arrays.toString(this.status) + "]";
+        }
     }
 
-    private static Map<String, Value> chunkMap = new HashMap<>();
+    public static Map<String, Value> chunkMap = new HashMap<>();
 
     /**
      * 判断文件所有分块是否已上传

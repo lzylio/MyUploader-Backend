@@ -1,8 +1,8 @@
 spring:
   datasource:
     username: root
-    password: root
-    url: jdbc:mysql:///MyUploader?useUnicode=true&characterEncoding=utf-8&serverTimeZone=UTC&useSSL=false
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/springbootdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&rewriteBatchedStatements=true
     driver-class-name: com.mysql.jdbc.Driver
   servlet:
     multipart:
@@ -13,3 +13,5 @@ mybatis:
   type-aliases-package: cn.attackme.myuploader.model
 upload:
   path: ./upload/
+server:
+  port: 8085
