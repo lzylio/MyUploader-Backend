@@ -22,6 +22,7 @@ public class BigFileUploadController {
     @Autowired
     private FileService fileService;
 
+    // size为整个文件的大小
     @PostMapping("/upload")
     public void upload(String name,
                        String md5,
